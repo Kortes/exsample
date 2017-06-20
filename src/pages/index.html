@@ -1,0 +1,47 @@
+{% extends "base/base.njk" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block main %}
+	{{ super() }}
+	{% include 'map/map.njk' %}
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="container__title">
+			Капитальный ремонт вашей квартиры<br>
+			со всеми работами и материалами<br>
+			от <strong>2 500 руб/м2</strong> и всего за <strong>25 дней</strong>
+		</h1>
+		<div class="wrapper">
+			{% include 'form/form.njk' %}
+			{% include 'carousel/carousel.njk' %}
+		</div>
+	</div>	
+	<div class="container">
+		<div class="container__title">
+			Реальные преимущества на каждом<br>этапе работ
+		</div>
+		<div class="container__info">
+			За <strong>9 лет работы</strong> в сфере дизайна, проектирования и ремонта<br>мы продумали для вас каждую мелочь
+		</div>
+		{% include 'table/table.njk' %}
+	</div>
+	<div class="container">
+		<div class="container__title">
+			Реальные преимущества на каждом<br>этапе работ
+		</div>
+		<div class="container__info">
+			За <strong>9 лет работы</strong> в сфере дизайна, проектирования и ремонта<br>мы продумали для вас каждую мелочь
+		</div>
+		{% include 'card/card-list.njk' %}
+		{% include 'yellow-form/yellow-form.njk' %}
+	</div>
+{% endblock %}
+
+{% block script %}
+	<script src="../js/slick/slick.min.js"></script>
+	<script src="../js/fancybox/fancybox.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+{% endblock %}
