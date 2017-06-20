@@ -1,0 +1,11 @@
+<li class="card {% if item.big %}card_size_big{% else %}card_size_small{% endif %}">
+	<a href="{{ item.bigImage }}" rel="card-group" class="card__link">
+		<span class="card__image">
+			<img src="{{ item.image }}" class="card__img" alt="{{ item.title }}" />
+		</span>
+		<span class="card__info">
+			<span class="card__title">{{ item.title }}</span>
+			<span class="card__text">{{ item.metr }} м<sup>2</sup>, {{ item.city }}</span>
+		</span>
+	</a>
+</li>

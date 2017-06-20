@@ -17,13 +17,13 @@ var path = {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
-        img: 'images/'
+        img: 'build/images/'
     },
     src: { //откуда брать исходники
     	html: 'src/pages/*.html',
         templates: 'src/blocks',
-        js: 'src/js/main.js',
-        style: 'src/style/main.less',
+        js: 'js/scripts.js',
+        style: 'src/main.less',
         img: 'images/*.*'
     },
     watch: { //за изменением каких файлов мы хотим наблюдать
@@ -37,6 +37,7 @@ var path = {
 };
 
 var config = {
+    startPath:"./build",
     server: {
         baseDir: "./"
     },

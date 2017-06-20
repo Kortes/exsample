@@ -1,79 +1,59 @@
+{% set cards = [
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68"
+	},
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "2Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68",
+		"big": true
+	},
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68"
+	},
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68"
+	},
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68"
+	},
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68",
+		"big": true
+	},
+	{
+		"bigImage": "./images/carousel-big1.jpg",
+		"image": "./images/carousel1.jpg",
+		"title": "Двухкомнатная квартира",
+		"city": "Москва",
+		"metr": "68"
+	}
+]%}
+
 <ul class="card-list">
-	<li class="card card_size_small">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
-	<li class="card card_size_big">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
-	<li class="card card_size_small">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
-	<li class="card card_size_small">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
-	<li class="card card_size_small">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
-	<li class="card card_size_big">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
-	<li class="card card_size_small">
-		<a href="./images/carousel-big1.jpg" rel="card-group" class="card__link">
-			<span class="card__image">
-				<img src="./images/carousel1.jpg" class="card__img" alt="Двухкомнатная квартира" />
-			</span>
-			<span class="card__info">
-				<span class="card__title">Двухкомнатная квартира</span>
-				<span class="card__text">68 м<sup>2</sup>, Москва</span>
-			</span>
-		</a>
-	</li>
+	{% for item in cards %}
+		{% include 'card/card.njk' %}
+	{% endfor %}
 </ul>

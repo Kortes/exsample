@@ -1,0 +1,75 @@
+.card-list{
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.card{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	height: 300px;
+	font-size: 14px;
+	margin: 0 10px 40px;
+}
+
+.card_size_small{
+	width: 300px;
+}
+
+.card_size_big{
+	width: 620px;
+}
+
+.card__link{
+	text-decoration: none;
+	display: block;
+	color: #222222;
+	border-bottom: 4px solid #8c8d8e;
+}
+
+.card__link:hover{
+	border-color: #8f6f57;
+}
+
+.card__link:hover .card__image:before{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	background: rgba(44, 23, 8, 0.65) url("../images/loop-big.png") no-repeat right bottom;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-size: auto 75%;
+}
+
+.card__info{
+	padding: 15px;
+	background: #f7f5f2;
+	line-height: 24px;
+	height: 48px;
+	display: block;
+}
+.card__title,
+.card__text{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+}
+.card__text{
+	opacity: 0.7;
+}
+.card__image{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 210px;
+}
+.card__img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
